@@ -1,6 +1,29 @@
 <!--設定樣式、編碼等-->
 <link href="https://dict.toastfriends.cf/style.css" rel="stylesheet" />
 <meta charset="utf8">
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBgJr56ZEZjKnBLHj04FKzh1xo6ZMeJKMw",
+    authDomain: "cowstartpage.firebaseapp.com",
+    projectId: "cowstartpage",
+    storageBucket: "cowstartpage.appspot.com",
+    messagingSenderId: "41744860492",
+    appId: "1:41744860492:web:7f4b345692a9f4ec787be9",
+    measurementId: "G-X2LF4MJRHQ"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 <title>哞～</title>
 <!--起始頁開始-->
 <center>
