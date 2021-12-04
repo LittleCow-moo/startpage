@@ -11,7 +11,14 @@
       }},
       go:function (thing){
         location.href=thing
+      },
+    change:function (thing){
+      if (thing.startsWith('http://') || thing.startsWith('https://')){
+       document.getElementById('go').innerHTML='🐮🌐'
+      } else {
+        document.getElementById('go').innerHTML='🐮🔎'
       }
+    },
   }
 </script>
 <script type="module">
@@ -42,5 +49,5 @@
 <center>
 <img width="30%" src="https://cow-moomoomoo.github.io/littlecow.png" />
 <font size="100%" face="sans-serif">哞～</font><br>
-<input required id="search" style="width:100%" placeholder="輸入網址或搜尋字串..." /><button onclick="cowstart.process(document.getElementById('search').value)">🐮🔎</button>
+<input required onchange="cowstart.change(this.value)" id="search" style="width:100%" placeholder="輸入網址或搜尋字串..." /><button id="go" onclick="cowstart.process(document.getElementById('search').value)">🐮</button>
 </center>
