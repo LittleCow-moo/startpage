@@ -1,6 +1,19 @@
 <!--設定樣式、編碼等-->
 <link href="https://dict.toastfriends.cf/style.css" rel="stylesheet" />
 <meta charset="utf8">
+<script>
+  var cowstart = {
+    process:function (thing){
+      if (thing.startsWith('http://') || thing.startsWith('https://')){
+        cowstart.go(thing)
+      } else {
+        cowstart.go('https://cse.google.com/cse?cx=867941d9b887aa2d2&q='+thing)
+      }
+      go:function (thing){
+        location.href=thing
+      }
+  }
+</script>
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
@@ -29,5 +42,5 @@
 <center>
 <img width="30%" src="https://cow-moomoomoo.github.io/littlecow.png" />
 <font size="100%" face="sans-serif">哞～</font><br>
-<input required id="search" style="width:100%" placeholder="輸入網址或搜尋字串..." /><button onclick="location.href=('https://cse.google.com/cse?cx=867941d9b887aa2d2&q='+document.getElementById('search').value)">🐮🔎</button>
+<input required id="search" style="width:100%" placeholder="輸入網址或搜尋字串..." /><button onclick="cowstart.process(document.getElementById('search').value)">🐮🔎</button>
 </center>
