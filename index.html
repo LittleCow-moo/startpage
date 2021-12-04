@@ -4,6 +4,7 @@
 <script>
   var cowstart = {
     process:function (thing){
+      if (thing==(null||'')) return
       if (thing.startsWith('http://') || thing.startsWith('https://')){
         cowstart.go(thing)
       } else {
