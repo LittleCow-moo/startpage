@@ -53,5 +53,7 @@
 <center>
 <img width="30%" src="https://cow-moomoomoo.github.io/littlecow.png" />
 <font size="100%" face="sans-serif">哞～</font><br>
-<input required onchange="cowstart.change(this.value)" id="search" style="width:100%" placeholder="輸入網址或搜尋字串..." /><button id="go" onclick="cowstart.process(document.getElementById('search').value)">🐮</button>
+<div id="searchbox">
+<input required onchange="cowstart.change(this.value)" id="search" style="width:95%" placeholder="輸入網址或搜尋字串..." /><button width="5%" id="go" onclick="cowstart.process(document.getElementById('search').value)">🐮</button>
+</div>
 </center>
